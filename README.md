@@ -77,7 +77,7 @@ This will:
 | Random Forest  | 0.998       | 0.863      | 0.832 ± 0.017   |
 
 **Model Quality Indicators**:
-- ✅ Test accuracy ~85% (realistic performance)
+- ✅ Test accuracy ~85%
 - ✅ Low CV variance (±1.7-2.2%) indicates stability
 - ✅ Small generalization gap (11.8%) acceptable for financial data
 - ✅ Balanced class distribution (50/50 split)
@@ -91,6 +91,26 @@ This will:
 | 3    | NVDA   | NVIDIA               | 99.8%               |
 | 4    | ALGM   | Allegro Micro        | 99.7%               |
 | 5    | LRCX   | Lam Research         | 99.6%               |
+
+## Visualizations
+
+### Model Performance Comparison
+
+![Model Comparison](outputs/visualizations/temporal_semiconductors/model_comparison.png)
+
+Comparison of three ML models (Random Forest, XGBoost, LightGBM) across training, testing, and cross-validation metrics.
+
+### Company Success Rankings
+
+![Company Rankings](outputs/visualizations/temporal_semiconductors/company_ranking.png)
+
+Top 15 semiconductor companies ranked by predicted success probability based on the trained LightGBM model.
+
+### Learning Curve Analysis
+
+![Learning Curve](outputs/visualizations/temporal_semiconductors/learning_curve.png)
+
+Learning curve showing model performance as training sample size increases, demonstrating convergence between train and test scores.
 
 ## Sector-Specific Factors
 

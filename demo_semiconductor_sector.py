@@ -286,9 +286,14 @@ def main():
         top_companies = rankings.head(15)
         y_pos = np.arange(len(top_companies))
 
+        # Get ticker from latest_data DataFrame to avoid duplicate column issue
+        ticker_values = top_companies['ticker'].values
+        if len(ticker_values.shape) > 1:
+            ticker_values = ticker_values[:, 0]  # Take first column if 2D
+
         ax.barh(y_pos, top_companies['success_probability'], alpha=0.8)
         ax.set_yticks(y_pos)
-        ax.set_yticklabels(top_companies['ticker'])
+        ax.set_yticklabels(ticker_values)
         ax.invert_yaxis()
         ax.set_xlabel('Success Probability')
         ax.set_title('Top 15 Semiconductor Companies - Success Probability')
