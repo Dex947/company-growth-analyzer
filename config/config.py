@@ -59,22 +59,34 @@ MODEL_CONFIGS = {
         "solver": "liblinear"
     },
     "random_forest": {
-        "n_estimators": 100,
-        "max_depth": 10,
+        "n_estimators": 50,
+        "max_depth": 5,
+        "min_samples_split": 10,
+        "min_samples_leaf": 5,
         "random_state": RANDOM_SEED,
         "n_jobs": -1
     },
     "xgboost": {
-        "n_estimators": 100,
-        "max_depth": 6,
-        "learning_rate": 0.1,
+        "n_estimators": 50,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
         "random_state": RANDOM_SEED,
         "n_jobs": -1
     },
     "lightgbm": {
-        "n_estimators": 100,
-        "max_depth": 6,
-        "learning_rate": 0.1,
+        "n_estimators": 50,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "min_child_samples": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
         "random_state": RANDOM_SEED,
         "n_jobs": -1,
         "verbose": -1

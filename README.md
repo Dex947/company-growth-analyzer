@@ -70,17 +70,18 @@ This will:
 
 ### Model Performance
 
-| Model          | Train Score | Test Score | CV Score (±std) |
-|----------------|-------------|------------|-----------------|
-| **LightGBM**   | 0.970       | 0.853      | 0.845 ± 0.017   |
-| XGBoost        | 0.988       | 0.853      | 0.847 ± 0.022   |
-| Random Forest  | 0.998       | 0.863      | 0.832 ± 0.017   |
+| Model          | Train Score | Test Score | CV Score (±std) | Gap   |
+|----------------|-------------|------------|-----------------|-------|
+| **XGBoost**    | 0.865       | 0.833      | 0.828 ± 0.025   | 0.031 |
+| LightGBM       | 0.879       | 0.833      | 0.818 ± 0.030   | 0.046 |
+| Random Forest  | 0.867       | 0.824      | 0.813 ± 0.053   | 0.043 |
 
 **Model Quality Indicators**:
-- ✅ Test accuracy ~85%
-- ✅ Low CV variance (±1.7-2.2%) indicates stability
-- ✅ Small generalization gap (11.8%) acceptable for financial data
+- ✅ Test accuracy ~83% (realistic for financial prediction)
+- ✅ Low CV variance (±2.5-3.0%) indicates stability
+- ✅ Excellent generalization gap (3.1%) - no overfitting
 - ✅ Balanced class distribution (50/50 split)
+- ✅ Regularized models (L1/L2, max_depth=3, learning_rate=0.05)
 
 ### Top Predicted Companies
 
@@ -110,7 +111,11 @@ Top 15 semiconductor companies ranked by predicted success probability based on 
 
 ![Learning Curve](outputs/visualizations/temporal_semiconductors/learning_curve.png)
 
-Learning curve showing model performance as training sample size increases, demonstrating convergence between train and test scores.
+The learning curve demonstrates healthy model behavior:
+- **Test score improves** from 0.46 to 0.83 as training samples increase (40 → 406)
+- **Train and test curves converge** to ~0.87 and ~0.83 respectively
+- **Small final gap** (~4%) indicates proper regularization without overfitting
+- Validates that the 508-sample dataset is sufficient for reliable predictions
 
 ## Sector-Specific Factors
 

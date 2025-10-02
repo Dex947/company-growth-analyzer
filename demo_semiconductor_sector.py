@@ -304,7 +304,9 @@ def main():
 
         log.info(f" Company ranking saved")
 
-        # 3. Learning Curve (showing overfitting reduction)
+        # 3. Learning Curve (with proper regularization)
+        from src.models.model_factory import ModelFactory
+
         fig, ax = plt.subplots(figsize=(10, 6))
 
         # Sample sizes for learning curve
@@ -317,7 +319,8 @@ def main():
             X_subset = X_train.iloc[:n_samples]
             y_subset = y_train.iloc[:n_samples]
 
-            model = results[best_model_name]['model'].__class__()
+            # Use ModelFactory to get properly configured model
+            model = ModelFactory.create_model(best_model_name)
             model.fit(X_subset, y_subset)
 
             train_scores_lc.append(model.score(X_subset, y_subset))
