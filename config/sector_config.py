@@ -7,31 +7,67 @@ based on industry best practices and financial research.
 
 from typing import Dict, List
 
-# Semiconductor sector companies (12-15 companies for proper ML training)
+# Semiconductor sector companies (50+ companies for robust ML training)
 SEMICONDUCTOR_COMPANIES = {
-    # Major Foundries & IDMs
+    # Tier 1: Mega Cap (>$100B)
     'NVDA': {'name': 'NVIDIA Corporation', 'segment': 'GPU/AI Chips'},
-    'AMD': {'name': 'Advanced Micro Devices', 'segment': 'CPU/GPU'},
-    'INTC': {'name': 'Intel Corporation', 'segment': 'CPU/Foundry'},
+    'AVGO': {'name': 'Broadcom Inc.', 'segment': 'Diversified'},
     'TSM': {'name': 'Taiwan Semiconductor', 'segment': 'Pure Foundry'},
 
-    # Memory & Storage
+    # Tier 2: Large Cap ($20B-$100B)
+    'AMD': {'name': 'Advanced Micro Devices', 'segment': 'CPU/GPU'},
     'MU': {'name': 'Micron Technology', 'segment': 'Memory/DRAM'},
-
-    # Analog & Mixed Signal
+    'QCOM': {'name': 'Qualcomm Inc.', 'segment': 'Mobile/RF'},
+    'INTC': {'name': 'Intel Corporation', 'segment': 'CPU/Foundry'},
     'TXN': {'name': 'Texas Instruments', 'segment': 'Analog'},
     'ADI': {'name': 'Analog Devices', 'segment': 'Analog'},
-    'NXPI': {'name': 'NXP Semiconductors', 'segment': 'Automotive'},
-
-    # Fabless Designers
-    'AVGO': {'name': 'Broadcom Inc.', 'segment': 'Diversified'},
-    'QCOM': {'name': 'Qualcomm Inc.', 'segment': 'Mobile/RF'},
     'MRVL': {'name': 'Marvell Technology', 'segment': 'Data Infrastructure'},
+    'NXPI': {'name': 'NXP Semiconductors', 'segment': 'Automotive'},
+    'ARM': {'name': 'Arm Holdings', 'segment': 'IP Licensing'},
 
-    # Equipment (for comparison)
-    'KLAC': {'name': 'KLA Corporation', 'segment': 'Equipment'},
-    'LRCX': {'name': 'Lam Research', 'segment': 'Equipment'},
+    # Tier 3: Mid Cap ($5B-$20B)
+    'MPWR': {'name': 'Monolithic Power Systems', 'segment': 'Power Management'},
+    'MCHP': {'name': 'Microchip Technology', 'segment': 'Microcontrollers'},
+    'ON': {'name': 'ON Semiconductor', 'segment': 'Power/Sensors'},
+    'STM': {'name': 'STMicroelectronics', 'segment': 'Diversified'},
+    'SWKS': {'name': 'Skyworks Solutions', 'segment': 'RF/Wireless'},
+    'QRVO': {'name': 'Qorvo Inc.', 'segment': 'RF/Wireless'},
+    'MXL': {'name': 'MaxLinear Inc.', 'segment': 'Connectivity'},
+    'CRUS': {'name': 'Cirrus Logic', 'segment': 'Audio'},
+    'SLAB': {'name': 'Silicon Labs', 'segment': 'IoT/Wireless'},
+    'ALGM': {'name': 'Allegro MicroSystems', 'segment': 'Sensors'},
+    'DIOD': {'name': 'Diodes Incorporated', 'segment': 'Discrete'},
+    'SMTC': {'name': 'Semtech Corporation', 'segment': 'Analog/Mixed Signal'},
+    'LITE': {'name': 'Lumentum Holdings', 'segment': 'Optical'},
+    'COHR': {'name': 'Coherent Corp', 'segment': 'Optical/Lasers'},
+    'WOLF': {'name': 'Wolfspeed Inc.', 'segment': 'SiC/Power'},
+
+    # Tier 4: Small-Mid Cap ($1B-$5B)
+    'AMBA': {'name': 'Ambarella Inc.', 'segment': 'Computer Vision'},
+    'POWI': {'name': 'Power Integrations', 'segment': 'Power Management'},
+    'MTSI': {'name': 'MACOM Technology', 'segment': 'RF/Microwave'},
+    'SITM': {'name': 'SiTime Corporation', 'segment': 'MEMS Timing'},
+    'CCMP': {'name': 'Cabot Microelectronics', 'segment': 'Materials'},
+    'SMCI': {'name': 'Super Micro Computer', 'segment': 'Systems/AI Servers'},
+    'RMBS': {'name': 'Rambus Inc.', 'segment': 'Memory IP'},
+    'AOSL': {'name': 'Alpha and Omega', 'segment': 'Power Discretes'},
+    'NVTS': {'name': 'Navitas Semiconductor', 'segment': 'GaN Power'},
+    'PI': {'name': 'Impinj Inc.', 'segment': 'RFID/IoT'},
+    'CRUS': {'name': 'Cirrus Logic', 'segment': 'Mixed Signal'},
+
+    # Tier 5: Equipment (for diversification)
     'AMAT': {'name': 'Applied Materials', 'segment': 'Equipment'},
+    'LRCX': {'name': 'Lam Research', 'segment': 'Equipment'},
+    'KLAC': {'name': 'KLA Corporation', 'segment': 'Equipment'},
+    'ASML': {'name': 'ASML Holding', 'segment': 'Lithography Equipment'},
+    'ENTG': {'name': 'Entegris Inc.', 'segment': 'Materials/Equipment'},
+    'MKSI': {'name': 'MKS Instruments', 'segment': 'Equipment'},
+    'ACLS': {'name': 'Axcelis Technologies', 'segment': 'Ion Implant'},
+    'UCTT': {'name': 'Ultra Clean Holdings', 'segment': 'Equipment/Services'},
+    'FORM': {'name': 'FormFactor Inc.', 'segment': 'Test/Measurement'},
+    'ONTO': {'name': 'Onto Innovation', 'segment': 'Process Control'},
+    'COHU': {'name': 'Cohu Inc.', 'segment': 'Test/Handler Equipment'},
+    'ICHR': {'name': 'Ichor Holdings', 'segment': 'Fluid Delivery'},
 }
 
 # Cloud/SaaS sector companies

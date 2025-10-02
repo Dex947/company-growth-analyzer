@@ -5,8 +5,10 @@ Retrieves company financial metrics, stock prices, and fundamental data.
 
 import pandas as pd
 import yfinance as yf
+import numpy as np
 from typing import List, Dict, Any
 from datetime import datetime, timedelta
+import time
 
 from src.data_ingestion.base_collector import BaseDataCollector
 from src.utils.logger import log
@@ -27,11 +29,13 @@ class FinancialDataCollector(BaseDataCollector):
     both types of metrics for the model to decide.
     """
 
-    def __init__(self):
+    def __init__(self, quarters_back: int = 12):
         super().__init__()
         self.alpha_vantage_api_key = ALPHA_VANTAGE_API_KEY
+        self.quarters_back = quarters_back
+        self.days_per_quarter = 63
 
-    def collect(self, tickers: List[str], period: str = "1y") -> pd.DataFrame:
+    def collect(self, tickers: List[str], period: str = "1y", temporal: bool = True) -> pd.DataFrame:
         """
         Collect financial data for given company tickers.
 
