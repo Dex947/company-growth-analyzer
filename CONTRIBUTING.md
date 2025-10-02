@@ -47,7 +47,7 @@ Feature requests are welcome! Please create an issue describing:
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/company-growth-analyzer.git
+git clone https://github.com/Dex947/company-growth-analyzer.git
 cd company-growth-analyzer
 
 # Create virtual environment
