@@ -1,0 +1,10 @@
+{
+  "ticker": "NFLX",
+  "article_count": 0,
+  "avg_sentiment_textblob": 0.0,
+  "avg_sentiment_vader": 0.0,
+  "sentiment_variance": 0.0,
+  "positive_ratio": 0.5,
+  "negative_ratio": 0.5,
+  "data_collection_date": "2025-10-02T08:50:04.197914"
+}

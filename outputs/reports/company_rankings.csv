@@ -1,0 +1,16 @@
+company,ticker,prediction,success_probability,market_cap,sector
+Alphabet Inc.,GOOGL,1,0.94,2985129934848,Communication Services
+NVIDIA Corporation,NVDA,1,0.94,4558732394496,Technology
+Microsoft Corporation,MSFT,1,0.91,3863091085312,Technology
+"Advanced Micro Devices, Inc.",AMD,1,0.91,266162585600,Technology
+"Meta Platforms, Inc.",META,1,0.88,1868405407744,Communication Services
+Intel Corporation,INTC,1,0.67,170974396416,Technology
+"Netflix, Inc.",NFLX,1,0.55,514420113408,Communication Services
+The Walt Disney Company,DIS,0,0.32,204011552768,Communication Services
+"Tesla, Inc.",TSLA,0,0.27,1527773790208,Consumer Cyclical
+"PepsiCo, Inc.",PEP,0,0.25,195969712128,Consumer Defensive
+"Amazon.com, Inc.",AMZN,0,0.2,2352999563264,Consumer Cyclical
+Walmart Inc.,WMT,0,0.18,822479290368,Consumer Defensive
+The Coca-Cola Company,KO,0,0.16,287398887424,Consumer Defensive
+Costco Wholesale Corporation,COST,0,0.13,406599041024,Consumer Defensive
+Apple Inc.,AAPL,0,0.1,3791126003712,Technology

@@ -1,0 +1,82 @@
+{
+  "model_type": "RandomForestClassifier",
+  "n_features": 67,
+  "n_samples": 3,
+  "top_features_permutation": [
+    {
+      "feature": "momentum_value_combo",
+      "importance_mean": 0.2,
+      "importance_std": 0.16329931618554522
+    },
+    {
+      "feature": "revenue_growth",
+      "importance_mean": 0.2,
+      "importance_std": 0.16329931618554522
+    },
+    {
+      "feature": "returns_6m",
+      "importance_mean": 0.2,
+      "importance_std": 0.16329931618554522
+    },
+    {
+      "feature": "valuation_momentum_interaction",
+      "importance_mean": 0.2,
+      "importance_std": 0.16329931618554522
+    },
+    {
+      "feature": "price_52w_high",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "market_cap",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "current_price",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "peg_ratio",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "price_to_book",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "price_52w_low",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "avg_volume",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "revenue",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "debt_to_equity",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "operating_margin",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "profit_margin",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    }
+  ]
+}

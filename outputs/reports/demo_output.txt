@@ -1,0 +1,296 @@
+
+================================================================================
+            Semiconductor Sector Analysis - Gateway Arch Methodology            
+================================================================================
+
+Analyzing 14 semiconductor companies:
+  - NVDA: NVIDIA Corporation (GPU/AI Chips)
+  - AMD: Advanced Micro Devices (CPU/GPU)
+  - INTC: Intel Corporation (CPU/Foundry)
+  - TSM: Taiwan Semiconductor (Pure Foundry)
+  - MU: Micron Technology (Memory/DRAM)
+  - TXN: Texas Instruments (Analog)
+  - ADI: Analog Devices (Analog)
+  - NXPI: NXP Semiconductors (Automotive)
+  - AVGO: Broadcom Inc. (Diversified)
+  - QCOM: Qualcomm Inc. (Mobile/RF)
+  - MRVL: Marvell Technology (Data Infrastructure)
+  - KLAC: KLA Corporation (Equipment)
+  - LRCX: Lam Research (Equipment)
+  - AMAT: Applied Materials (Equipment)
+
+================================================================================
+                            Step 1: Data Collection                             
+================================================================================
+
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mStarting data collection for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCollecting financial data for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_NVDA_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_NVDA_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_AMD_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_AMD_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_INTC_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_INTC_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_TSM_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_TSM_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_MU_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_MU_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_TXN_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_TXN_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_ADI_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_ADI_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_NXPI_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_NXPI_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_AVGO_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_AVGO_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_QCOM_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_QCOM_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_MRVL_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_MRVL_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_KLAC_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_KLAC_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_LRCX_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_LRCX_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\financial_AMAT_1y.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for financial_AMAT_1y[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCollected financial data for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCollecting sentiment data for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_NVDA_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_NVDA_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_AMD_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_AMD_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_INTC_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_INTC_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_TSM_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_TSM_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_MU_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_MU_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_TXN_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_TXN_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_ADI_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_ADI_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_NXPI_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_NXPI_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_AVGO_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_AVGO_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_QCOM_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_QCOM_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_MRVL_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_MRVL_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_KLAC_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_KLAC_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_LRCX_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_LRCX_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mLoaded JSON from D:\Projects\Company growth analyzer\data\raw\cache\sentiment_AMAT_90d.json[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mCache hit for sentiment_AMAT_90d[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCollected sentiment data for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mMerged sentiment data[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCollecting market data for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mMarket data collection complete[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mSaved DataFrame to D:\Projects\Company growth analyzer\data\raw\combined_data_20251002_092359.parquet (parquet format)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mData collection complete: 14 companies, 57 features[0m
+[OK] Collected data: 14 companies, 57 features
+
+================================================================================
+                          Step 2: Feature Engineering                           
+================================================================================
+
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mEngineering features[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreated 17 engineered features[0m
+[OK] Engineered features: 74 total features
+
+================================================================================
+                Step 3: Factor Model - The Gateway Arch Approach                
+================================================================================
+
+BEFORE Factor Model:
+  - Features: 71
+  - Samples: 14
+  - Ratio: 0.20:1 (POOR - need 10:1)
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mInitialized SectorFactorModel for semiconductors with 5 factors[0m
+
+Factor Model Composition:
+               factor                                                 description                                                   metrics  weight  n_metrics
+ innovation_intensity R&D spending, patent activity, and technological leadership              rd_pct_revenue, revenue_growth, gross_margin    0.20          3
+profitability_quality                Margin strength, capital efficiency, returns operating_margin, return_on_equity, free_cash_flow_margin    0.25          3
+      market_position                   Competitive positioning and pricing power     market_cap, revenue_rank_in_sector, price_momentum_3m    0.20          3
+     financial_health                        Balance sheet strength and liquidity                debt_to_equity, current_ratio, quick_ratio    0.15          3
+      growth_momentum                           Revenue and earnings acceleration   revenue_growth, earnings_growth, returns_3m, returns_6m    0.20          4
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputing factor scores for 14 companies[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1minnovation_intensity: used 1/3 metrics (weight=0.20)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputed innovation_intensity: mean=-0.000, std=0.208[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mprofitability_quality: used 2/3 metrics (weight=0.25)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputed profitability_quality: mean=0.000, std=0.246[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mmarket_position: used 1/3 metrics (weight=0.20)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputed market_position: mean=0.043, std=0.160[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mfinancial_health: used 1/3 metrics (weight=0.15)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputed financial_health: mean=0.000, std=0.156[0m
+[32m2025-10-02 09:23:59[0m | [34m[1mDEBUG   [0m | [34m[1mgrowth_momentum: used 3/4 metrics (weight=0.20)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mComputed growth_momentum: mean=-0.000, std=0.161[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mFactor scores computed: 6 factors[0m
+
+[OK] Computed factor scores: 6 factors
+
+AFTER Factor Model:
+  - Factors: 5
+  - Samples: 14
+  - Ratio: 2.80:1
+  - Improvement: 14.2x better
+  - WARNING: Need 36 more samples or fewer factors
+
+================================================================================
+             Step 4: Sector-Relative Target (vs Absolute Threshold)             
+================================================================================
+
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mInitialized SectorRelativeTarget for semiconductors: method=sector_relative, lookback=6M[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreating sector_relative target from returns_6m[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mUsing overall median threshold: 0.4171[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreated binary target: 7 outperformers, 7 underperformers (50.0% positive class)[0m
+Target Method: sector_relative_volatility_adjusted
+Threshold: 0.4171
+Outperformers: 7 (50.0%)
+Underperformers: 7
+
+Target Validation: GOOD: Classes are balanced
+
+================================================================================
+                             Step 5: Preprocessing                              
+================================================================================
+
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mSaved DataFrame to D:\Projects\Company growth analyzer\data\processed\semiconductor_factors.parquet (parquet format)[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mFitting preprocessor on 14 samples[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mScaled 5 numeric features[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mPreprocessing fit complete[0m
+[OK] Preprocessed: 14 samples, 5 features
+
+================================================================================
+              Step 6: Model Training with Proper Sample Efficiency              
+================================================================================
+
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mPreparing data: 14 samples, 5 features[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mSplit data: Train=11, Test=3[0m
+Train set: 11 samples
+Test set: 3 samples
+
+Training 2 models...
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mStarting model training[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreated random_forest model with config: {'n_estimators': 100, 'max_depth': 10, 'random_state': 42, 'n_jobs': -1}[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreated xgboost model with config: {'n_estimators': 100, 'max_depth': 6, 'learning_rate': 0.1, 'random_state': 42, 'n_jobs': -1}[0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mCreated 2 models: ['random_forest', 'xgboost'][0m
+[32m2025-10-02 09:23:59[0m | [1mINFO    [0m | [1mTraining random_forest...[0m
+[32m2025-10-02 09:24:00[0m | [1mINFO    [0m | [1mrandom_forest - Train: 1.0000, Test: 1.0000, CV: 0.6333 (+/- 0.3712)[0m
+[32m2025-10-02 09:24:00[0m | [1mINFO    [0m | [1mTraining xgboost...[0m
+[32m2025-10-02 09:24:00[0m | [1mINFO    [0m | [1mxgboost - Train: 0.9091, Test: 1.0000, CV: 0.5333 (+/- 0.0667)[0m
+
+Model Performance:
+
+random_forest:
+  Train Score: 1.0000
+  Test Score:  1.0000
+  CV Score:    0.6333 (+/- 0.3712)
+
+xgboost:
+  Train Score: 0.9091
+  Test Score:  1.0000
+  CV Score:    0.5333 (+/- 0.0667)
+[32m2025-10-02 09:24:00[0m | [1mINFO    [0m | [1mBest model: random_forest (test_score=1.0000)[0m
+
+[OK] Best model: random_forest
+
+================================================================================
+              Step 7: Factor Importance (Not Individual Features)               
+================================================================================
+
+
+Factor Importance Rankings:
+               factor  importance
+      growth_momentum    0.503109
+     financial_health    0.190472
+profitability_quality    0.181913
+ innovation_intensity    0.114283
+      market_position    0.010222
+
+================================================================================
+                     Step 8: Semiconductor Company Rankings                     
+================================================================================
+
+
+Semiconductor Company Success Rankings:
+ticker                company  success_probability  prediction  actual             segment
+    MU      Micron Technology                 0.94           1       1         Memory/DRAM
+  KLAC        KLA Corporation                 0.92           1       1           Equipment
+  LRCX           Lam Research                 0.87           1       1           Equipment
+   TSM   Taiwan Semiconductor                 0.85           1       1        Pure Foundry
+  INTC      Intel Corporation                 0.84           1       1         CPU/Foundry
+  NVDA     NVIDIA Corporation                 0.82           1       1        GPU/AI Chips
+  AVGO          Broadcom Inc.                 0.81           1       1         Diversified
+  NXPI     NXP Semiconductors                 0.32           0       0          Automotive
+   AMD Advanced Micro Devices                 0.24           0       0             CPU/GPU
+  MRVL     Marvell Technology                 0.20           0       0 Data Infrastructure
+   TXN      Texas Instruments                 0.19           0       0              Analog
+  QCOM          Qualcomm Inc.                 0.18           0       0           Mobile/RF
+  AMAT      Applied Materials                 0.12           0       0           Equipment
+   ADI         Analog Devices                 0.09           0       0              Analog
+[32m2025-10-02 09:24:01[0m | [1mINFO    [0m | [1mSaved DataFrame to D:\Projects\Company growth analyzer\outputs\reports\semiconductor_rankings.csv (parquet format)[0m
+
+[OK] Saved rankings to D:\Projects\Company growth analyzer\outputs\reports\semiconductor_rankings.csv
+
+================================================================================
+           Step 9: Factor Analysis - Why Did Companies Rank This Way?           
+================================================================================
+
+
+TOP PERFORMER: Micron Technology (MU)
+Success Probability: 94.0%
+Segment: Memory/DRAM
+
+Top Strengths (Factors):
+                         score
+target                1.000000
+growth_momentum       0.300737
+innovation_intensity  0.217612
+
+BOTTOM PERFORMER: Analog Devices (ADI)
+Success Probability: 9.0%
+Segment: Analog
+
+Top Strengths (Factors):
+                         score
+target                0.000000
+market_position       0.000000
+innovation_intensity -0.008686
+
+================================================================================
+                       Step 10: Generating Visualizations                       
+================================================================================
+
+[OK] Saved confusion_matrix.png
+[OK] Saved model_comparison.png
+[OK] Saved company_ranking.png
+
+================================================================================
+                Demo Complete - Gateway Arch Methodology Summary                
+================================================================================
+
+What We Fixed:
+  1. [FIXED] Cross-sector comparison -> Same sector (semiconductors only)
+  2. [FIXED] 75 features on 15 samples -> 5 factors on 14 samples
+  3. [FIXED] Absolute threshold -> Sector-relative target
+  4. [FIXED] Poor sample efficiency -> 2.8:1 ratio (closer to 10:1 goal)
+
+Results:
+  - Best Model: random_forest
+  - Test Score: 1.0000
+  - CV Score: 0.6333 (+/- 0.3712)
+  - Top Semiconductor: Micron Technology (94.0%)
+
+Next Steps to Further Improve:
+  1. Collect monthly time-series data (14 companies × 24 months = 336 samples)
+  2. Implement walk-forward validation
+  3. Add sector-specific features (fab utilization, R&D trends)
+  4. Test on additional sectors (Cloud SaaS, Consumer Staples)
+
+Outputs saved to:
+  - Rankings: D:\Projects\Company growth analyzer\outputs\reports\semiconductor_rankings.csv
+  - Visualizations: D:\Projects\Company growth analyzer\outputs\visualizations\semiconductors
+  - Factor Data: D:\Projects\Company growth analyzer\data\processed\semiconductor_factors.parquet

@@ -1,0 +1,111 @@
+# Environment and credentials
+.env
+*.key
+*.pem
+credentials.json
+api_keys.txt
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+virtualenv/
+
+# Data files - exclude raw and processed data
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.parquet
+data/raw/*.feather
+data/raw/*.xlsx
+data/processed/*.csv
+data/processed/*.json
+data/processed/*.parquet
+data/processed/*.feather
+*.db
+*.sqlite
+*.h5
+*.hdf5
+
+# Logs
+logs/*.log
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# Hidden folders (starting with .)
+.*/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model artifacts and outputs
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+models/*.pth
+*.pkl
+*.joblib
+
+# Output files
+outputs/reports/*.html
+outputs/reports/*.pdf
+outputs/visualizations/*.png
+outputs/visualizations/*.jpg
+outputs/visualizations/*.svg
+
+# Caches
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+
+# Large compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+nul
